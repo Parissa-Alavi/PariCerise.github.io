@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Paricerise — handmade fruit leather and artisan honey-lemon jams for campus pickup."
+    />
+    <title>Paricerise | Handmade Fruit Leather & Jams</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="Paricerise home">
+          <span class="brand-mark">P</span>
+          <span>Paricerise</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#process">How it works</a>
+          <a href="#order">Order</a>
+        </nav>
+
+        <a class="button button-primary" href="#order">Order for pickup</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Handmade in small batches</p>
+            <h1>Fruit leather & artisan jams for sweet study breaks.</h1>
+            <p class="lede">
+              Paricerise makes naturally bright, little-sour, little-sweet preserves inspired by Persian flavors, crafted for campus life and slow mornings.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#menu">See the menu</a>
+              <a class="button button-secondary" href="#order">Place an order</a>
+            </div>
+
+            <ul class="hero-points" aria-label="Brand highlights">
+              <li>Small-batch</li>
+              <li>Campus pickup</li>
+              <li>Natural ingredients</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="jar jar-main">
+              <div class="jar-lid"></div>
+              <div class="jar-label">
+                <span>Paricerise</span>
+                <small>Wild Berry</small>
+              </div>
+            </div>
+            <div class="fruit-leather">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="floating-tag tag-one">Berry red</div>
+            <div class="floating-tag tag-two">Honey lemon</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Our menu</p>
+            <h2>Fruit leather that feels like a portable treat.</h2>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card leather-card">
+              <div class="card-topline">Fruit leather</div>
+              <h3>Barberry</h3>
+              <p>Intensely sour and beautifully bright.</p>
+              <ul>
+                <li>Fresh fruit</li>
+                <li>Natural texture</li>
+                <li>Mess-free snack</li>
+              </ul>
+              <div class="price-row">
+                <span>CHF 12</span>
+                <button class="add-item" data-name="Barberry fruit leather" data-price="CHF 12">Add to order</button>
+              </div>
+            </article>
+
+            <article class="product-card leather-card">
+              <div class="card-topline">Fruit leather</div>
+              <h3>Sour cherry</h3>
+              <p>Deep, juicy, and lightly tangy.</p>
+              <ul>
+                <li>Rich fruit flavor</li>
+                <li>For study breaks</li>
+                <li>Easy to carry</li>
+              </ul>
+              <div class="price-row">
+                <span>CHF 12</span>
+                <button class="add-item" data-name="Sour cherry fruit leather" data-price="CHF 12">Add to order</button>
+              </div>
+            </article>
+
+            <article class="product-card leather-card">
+              <div class="card-topline">Fruit leather</div>
+              <h3>Pomegranate</h3>
+              <p>Fresh, tart, and refreshing.</p>
+              <ul>
+                <li>Bright finish</li>
+                <li>Elegant flavor</li>
+                <li>Small-batch</li>
+              </ul>
+              <div class="price-row">
+                <span>CHF 12</span>
+                <button class="add-item" data-name="Pomegranate fruit leather" data-price="CHF 12">Add to order</button>
+              </div>
+            </article>
+
+            <article class="product-card jam-card">
+              <div class="card-topline">Honey-lemon jam</div>
+              <h3>Wild berry</h3>
+              <p>Rustic and fragrant with a vivid berry finish.</p>
+              <ul>
+                <li>Small batch</li>
+                <li>Jewel-toned</li>
+                <li>Perfect on toast</li>
+              </ul>
+              <div class="price-row">
+                <span>CHF 18</span>
+                <button class="add-item" data-name="Wild berry jam" data-price="CHF 18">Add to order</button>
+              </div>
+            </article>
+
+            <article class="product-card jam-card">
+              <div class="card-topline">Honey-lemon jam</div>
+              <h3>Raspberry & blackberry</h3>
+              <p>Bold, rich, and naturally sweet-tart.</p>
+              <ul>
+                <li>Layered berries</li>
+                <li>Bright acidity</li>
+                <li>Handcrafted</li>
+              </ul>
+              <div class="price-row">
+                <span>CHF 20</span>
+                <button class="add-item" data-name="Raspberry & blackberry jam" data-price="CHF 20">Add to order</button>
+              </div>
+            </article>
+
+            <article class="product-card jam-card">
+              <div class="card-topline">Specialty preserve</div>
+              <h3>Carrot, lemon & honey</h3>
+              <p>Persian-inspired, aromatic, and softly spiced.</p>
+              <ul>
+                <li>Golden color</li>
+                <li>Warm spices</li>
+                <li>Unique flavor</li>
+              </ul>
+              <div class="price-row">
+                <span>CHF 22</span>
+                <button class="add-item" data-name="Carrot lemon honey preserve" data-price="CHF 22">Add to order</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="about">
+        <div class="container">
+          <div class="section-heading narrow">
+            <p class="eyebrow">Why Paricerise</p>
+            <h2>Handmade, honest, and designed for everyday pleasure.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-item">
+              <span class="feature-icon">✦</span>
+              <h3>Small batches</h3>
+              <p>Every batch is made with attention, careful flavor balance, and a focus on texture.</p>
+            </div>
+
+            <div class="feature-item">
+              <span class="feature-icon">✦</span>
+              <h3>Simple ingredients</h3>
+              <p>Fruit, honey, lemon, and pantry staples—transparent ingredients and clear flavor.</p>
+            </div>
+
+            <div class="feature-item">
+              <span class="feature-icon">✦</span>
+              <h3>Campus pickup</h3>
+              <p>Designed for a quick, easy handoff around EPFL with flexible, friendly ordering.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="process" id="process">
+        <div class="container two-col">
+          <div>
+            <p class="eyebrow">How it works</p>
+            <h2>Made for your life between lectures.</h2>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <span>1</span>
+              <p>Choose your flavors and decide on pickup location.</p>
+            </div>
+            <div class="step">
+              <span>2</span>
+              <p>Send your order through the form and confirm by WhatsApp or Telegram.</p>
+            </div>
+            <div class="step">
+              <span>3</span>
+              <p>Pay by TWINT or cash and collect your goodies at campus.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="order-section" id="order">
+        <div class="container order-wrap">
+          <div class="order-copy">
+            <p class="eyebrow">Order for campus pickup</p>
+            <h2>Tell us what you want, and we’ll prepare it.</h2>
+            <p>
+              Add your favorites from the menu, then send your order. Pickup available from selected EPFL locations.
+            </p>
+            <div class="mini-card">
+              <strong>Pickup spot:</strong>
+              <span>Rolex Learning Center / Esplanade / agreed campus location</span>
+            </div>
+          </div>
+
+          <form class="order-form" id="orderForm">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              WhatsApp / Telegram / contact
+              <input type="text" name="contact" placeholder="e.g. +41 79 ..." required />
+            </label>
+
+            <label>
+              Pickup location
+              <select name="pickup">
+                <option>Rolex Learning Center</option>
+                <option>Esplanade</option>
+                <option>Another campus location</option>
+              </select>
+            </label>
+
+            <label>
+              Selected items
+              <textarea id="selectedItems" name="items" rows="4" placeholder="Your selected products will appear here."></textarea>
+            </label>
+
+            <label>
+              Extra details
+              <textarea name="notes" rows="3" placeholder="Allergies, gift note, preferred pickup time..."></textarea>
+            </label>
+
+            <button type="submit" class="button button-primary full-width">Send order</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <a href="#top" class="brand footer-brand">
+            <span class="brand-mark">P</span>
+            <span>Paricerise</span>
+          </a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>WhatsApp: +41 ...</p>
+          <p>Instagram: @paricerise</p>
+          <p>Email: hello@paricerise.com</p>
+        </div>
+
+        <div>
+          <h3>Hours</h3>
+          <p>By appointment & campus pickup</p>
+          <p>Small-batch orders available weekly</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
