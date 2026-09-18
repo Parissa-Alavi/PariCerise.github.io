@@ -1,63 +1,151 @@
-const selectedItems = [];
+const basket = [];
 
-const itemButtons = document.querySelectorAll('.add-item');
-const selectedItemsField = document.getElementById('selectedItems');
+const addButtons = document.querySelectorAll('.add-item');
+const basketItems = document.getElementById('basketItems');
+const basketTotal = document.getElementById('basketTotal');
+const clearBasketButton = document.getElementById('clearBasket');
 const orderForm = document.getElementById('orderForm');
+const year = document.getElementById('year');
 
-function updateSelectedItems() {
-  selectedItemsField.value = selectedItems.length
-    ? selectedItems.map((item) => `- ${item.name} (${item.price})`).join('\n')
-    : 'No items selected yet.';
+// Replace this placeholder number before publishing.
+const WHATSAPP_NUMBER = '41791234567';
+
+function formatCHF(value) {
+  return `CHF ${value.toFixed(0)}`;
 }
 
-itemButtons.forEach((button) => {
+function getBasketTotal() {
+  return basket.reduce((sum, item) => sum + item.price * item.quantity, 0);
+}
+
+function renderBasket() {
+  if (!basket.length) {
+    basketItems.innerHTML = '<p class="empty-basket">Your basket is empty. Add a flavour above to get started.</p>';
+    basketTotal.textContent = 'CHF 0';
+    return;
+  }
+
+  basketItems.innerHTML = basket
+    .map(
+      (item, index) => `
+        <div class="basket-item">
+          <div>
+            <strong>${item.name}</strong>
+            <small>${item.unit} · ${formatCHF(item.price)} each</small>
+          </div>
+          <div class="quantity-control" aria-label="Quantity for ${item.name}">
+            <button type="button" data-action="decrease" data-index="${index}" aria-label="Decrease ${item.name}">−</button>
+            <span>${item.quantity}</span>
+            <button type="button" data-action="increase" data-index="${index}" aria-label="Increase ${item.name}">+</button>
+          </div>
+        </div>
+      `
+    )
+    .join('');
+
+  basketTotal.textContent = formatCHF(getBasketTotal());
+}
+
+function addToBasket(name, price, unit) {
+  const existingItem = basket.find((item) => item.name === name);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    basket.push({ name, price, unit, quantity: 1 });
+  }
+
+  renderBasket();
+}
+
+addButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const name = button.dataset.name;
-    const price = button.dataset.price;
+    const price = Number(button.dataset.price);
+    const unit = button.dataset.unit;
 
-    const found = selectedItems.find((item) => item.name === name);
+    addToBasket(name, price, unit);
 
-    if (!found) {
-      selectedItems.push({ name, price });
-      button.textContent = 'Added';
-      button.disabled = true;
-      button.style.opacity = '0.7';
-    }
-
-    updateSelectedItems();
+    const originalLabel = button.textContent;
+    button.textContent = 'Added ✓';
+    window.setTimeout(() => {
+      button.textContent = originalLabel;
+    }, 850);
   });
+});
+
+basketItems.addEventListener('click', (event) => {
+  const button = event.target.closest('button[data-action]');
+  if (!button) return;
+
+  const index = Number(button.dataset.index);
+  const action = button.dataset.action;
+  const item = basket[index];
+
+  if (!item) return;
+
+  if (action === 'increase') {
+    item.quantity += 1;
+  }
+
+  if (action === 'decrease') {
+    item.quantity -= 1;
+    if (item.quantity <= 0) {
+      basket.splice(index, 1);
+    }
+  }
+
+  renderBasket();
+});
+
+clearBasketButton.addEventListener('click', () => {
+  basket.splice(0, basket.length);
+  renderBasket();
 });
 
 orderForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
+  if (!basket.length) {
+    alert('Please add at least one product to your basket first.');
+    return;
+  }
+
   const formData = new FormData(orderForm);
   const name = formData.get('name')?.toString().trim() || 'Friend';
   const contact = formData.get('contact')?.toString().trim() || 'Not provided';
-  const pickup = formData.get('pickup')?.toString().trim() || 'Campus location';
-  const notes = formData.get('notes')?.toString().trim() || 'No extra notes';
-  const items = selectedItems.length
-    ? selectedItems.map((item) => `- ${item.name} (${item.price})`).join('\n')
-    : 'No items selected';
+  const pickup = formData.get('pickup')?.toString().trim() || 'To be confirmed';
+  const notes = formData.get('notes')?.toString().trim() || 'No extra note';
+
+  const itemLines = basket.map(
+    (item) => `- ${item.quantity} × ${item.name} (${item.unit}) — ${formatCHF(item.price * item.quantity)}`
+  );
 
   const rawMessage = [
-    `Hello Paricerise!`,
+    'Hello PariCerise! 🍒',
     '',
     `Name: ${name}`,
     `Contact: ${contact}`,
-    `Pickup location: ${pickup}`,
+    `Preferred pickup area: ${pickup}`,
     '',
-    'Items:',
-    items,
+    'Order:',
+    ...itemLines,
     '',
-    `Notes: ${notes}`,
+    `Estimated total: ${formatCHF(getBasketTotal())}`,
     '',
-    'Thank you!'
+    `Note: ${notes}`,
+    '',
+    'Could you please confirm availability and pickup details? Thank you!'
   ].join('\n');
 
   const whatsappText = encodeURIComponent(rawMessage);
-  const whatsappUrl = `https://wa.me/41791234567?text=${whatsappText}`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`;
 
-  window.open(whatsappUrl, '_blank');
-  alert('Your order message has been prepared in WhatsApp. Please edit the final number if needed in script.js.');
+  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 });
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+renderBasket();
