@@ -1,435 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="PariCerise — handmade Persian lavashak and small-batch jams, created in Lausanne with vivid fruit flavors and local pickup."
-    />
-    <meta name="theme-color" content="#CC3333" />
-    <title>PariCerise | Handmade Lavashak & Jams</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PariCerise — handmade Persian lavashak and small-batch jams in Lausanne." />
+  <meta name="theme-color" content="#CC3333" />
+  <title>PariCerise | Lavashak & Handmade Jams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="PariCerise home">
+        <span class="brand-mark">PC</span>
+        <span class="brand-name">Pari<span>Cerise</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#lavashak">Lavashak</a>
+        <a href="#jams">Jams</a>
+        <a href="#story">Story</a>
+        <a href="#order">Order</a>
+      </nav>
+      <a class="button button-primary nav-order" href="#order">Order</a>
+    </div>
+  </header>
 
-  <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a href="#top" class="brand" aria-label="PariCerise home">
-          <span class="brand-mark" aria-hidden="true">PC</span>
-          <span class="brand-text">Pari<span>Cerise</span></span>
-        </a>
-
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#lavashak">Lavashak</a>
-          <a href="#jams">Jams</a>
-          <a href="#gifts">Gift boxes</a>
-          <a href="#story">Our story</a>
-          <a href="#order">Order</a>
-        </nav>
-
-        <a class="button button-primary nav-cta" href="#order">Order for pickup</a>
-      </div>
-    </header>
-
-    <main id="top">
-      <section class="hero">
-        <div class="persian-border" aria-hidden="true"></div>
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Handmade in Lausanne · inspired by Persian fruit traditions</p>
-            <h1>Fruit made joyful.</h1>
-            <p class="hero-kicker">Tangy lavashak, jewel-bright jams & little edible gifts.</p>
-            <p class="lede">
-              PariCerise is a small-batch fruit kitchen where Persian flavours meet a fresh,
-              natural and playful style. Think real fruit, bright colour, tart bites, warm
-              spices and jars made to share.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#lavashak">Taste the lavashak</a>
-              <a class="button button-soft" href="#gifts">See gift ideas</a>
-            </div>
-
-            <div class="hero-badges" aria-label="PariCerise highlights">
-              <span>Fruit-forward</span>
-              <span>Small-batch</span>
-              <span>Persian-inspired</span>
-              <span>Local pickup</span>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="hero-blob">
-              <div class="hero-photo photo-placeholder" role="img" aria-label="Placeholder for PariCerise product photograph">
-                <span class="photo-label">Your product photo</span>
-                <strong>Lavashak + jam + fresh fruit</strong>
-                <small>Use a warm close-up with fruit, linen, ceramic plate and a little Persian textile</small>
-              </div>
-            </div>
-            <div class="flower flower-one" aria-hidden="true">✿</div>
-            <div class="flower flower-two" aria-hidden="true">❋</div>
-            <div class="floating-note note-one">
-              <small>taste</small>
-              <strong>tart · fruity · vivid</strong>
-            </div>
-            <div class="floating-note note-two">
-              <small>mood</small>
-              <strong>natural · warm · giftable</strong>
-            </div>
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Handmade in Lausanne · Persian inspired</p>
+          <h1>Persian fruit,<br />made by hand.</h1>
+          <p class="hero-text">Lavashak and small-batch preserves with vivid fruit flavours.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#lavashak">Explore flavours</a>
+            <a class="text-link" href="#order">Order for pickup →</a>
           </div>
         </div>
-      </section>
+        <figure class="hero-image image-frame">
+          <img src="https://images.unsplash.com/photo-1451486242265-24b0c0ef9a51?auto=format&fit=crop&w=1600&q=82" alt="Artisan jars of dark fruit preserves" />
+          <figcaption>Small batches · local pickup</figcaption>
+        </figure>
+      </div>
+    </section>
 
-      <section class="wellness-strip">
-        <div class="container wellness-grid">
-          <article>
-            <span class="wellness-icon">🍒</span>
-            <div>
-              <strong>Real fruit first</strong>
-              <p>Fruit colour and fruit flavour stay at the centre.</p>
+    <section class="quiet-strip">
+      <div class="container quiet-strip-inner">
+        <span>Real fruit</span><i>✿</i><span>Small batches</span><i>✿</i><span>Persian flavours</span><i>✿</i><span>Made locally</span>
+      </div>
+    </section>
+
+    <section class="section products-section" id="lavashak">
+      <div class="container">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Lavashak</p>
+            <h2>Sour, fruity, Persian.</h2>
+          </div>
+          <p>Traditional fruit leather with a bright, tangy character.</p>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-visual visual-cherry">
+              <img src="https://images.unsplash.com/photo-1421494756418-72f0f89c6bfd?auto=format&fit=crop&w=1000&q=80" alt="Fresh red cherries" />
+              <span class="visual-note">Ingredient mood</span>
+            </div>
+            <div class="product-info">
+              <div><p class="product-type">Lavashak · draft 100 g</p><h3>Sour cherry</h3></div>
+              <p>Deep, juicy and mouth-wateringly tart.</p>
+              <div class="product-bottom"><strong>CHF 12</strong><button class="add-item" data-name="Sour Cherry Lavashak" data-price="12" data-unit="Draft 100 g pack">Add</button></div>
             </div>
           </article>
-          <article>
-            <span class="wellness-icon">🌿</span>
-            <div>
-              <strong>Simple, fresh feeling</strong>
-              <p>A light, natural identity rather than a heavy dessert brand.</p>
+
+          <article class="product-card">
+            <div class="product-visual visual-pomegranate">
+              <img src="https://images.unsplash.com/photo-1602878729245-e5a3dae173e6?auto=format&fit=crop&w=1000&q=80" alt="Fresh pomegranate on a ceramic plate" />
+              <span class="visual-note">Ingredient mood</span>
+            </div>
+            <div class="product-info">
+              <div><p class="product-type">Lavashak · draft 100 g</p><h3>Pomegranate</h3></div>
+              <p>Ruby-bright with a clean, elegant tartness.</p>
+              <div class="product-bottom"><strong>CHF 12</strong><button class="add-item" data-name="Pomegranate Lavashak" data-price="12" data-unit="Draft 100 g pack">Add</button></div>
             </div>
           </article>
-          <article>
-            <span class="wellness-icon">☀️</span>
-            <div>
-              <strong>Made in small batches</strong>
-              <p>Prepared carefully and offered in limited weekly quantities.</p>
+
+          <article class="product-card illustrated-card">
+            <div class="product-visual botanical-visual">
+              <div class="botanical-art" aria-hidden="true"><span>✿</span><b>زرشک</b><span>❋</span></div>
+              <span class="visual-note">Photo coming soon</span>
+            </div>
+            <div class="product-info">
+              <div><p class="product-type">Lavashak · draft 100 g</p><h3>Barberry</h3></div>
+              <p>Intensely sour, aromatic and jewel-red.</p>
+              <div class="product-bottom"><strong>CHF 12</strong><button class="add-item" data-name="Barberry Lavashak" data-price="12" data-unit="Draft 100 g pack">Add</button></div>
             </div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="product-section" id="lavashak">
-        <div class="container">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow">Lavashak · Persian fruit leather</p>
-              <h2>Sour, chewy, colourful.</h2>
-            </div>
-            <p class="section-note">
-              Concentrated fruit with a playful sweet-sour character. Package sizes below are draft placeholders until your final packaging is chosen.
-            </p>
-          </div>
-
-          <div class="product-grid">
-            <article class="product-card lavashak-card">
-              <div class="product-photo photo-placeholder photo-barberry" role="img" aria-label="Photo placeholder for barberry lavashak">
-                <span class="photo-label">Add photo</span>
-                <strong>Barberry</strong>
-              </div>
-              <div class="product-body">
-                <div class="product-meta"><span>Lavashak</span><span>Draft 100 g</span></div>
-                <h3>Barberry</h3>
-                <p>Bright, jewel-like and intensely tart with the distinctive tang of zereshk.</p>
-                <div class="tag-row"><span>Very sour</span><span>Persian classic</span></div>
-                <div class="taste-row"><span>Sour ●●●●●</span><span>Sweet ●○○○○</span></div>
-                <div class="price-row">
-                  <div><span class="price">CHF 12</span><small>per pack</small></div>
-                  <button class="add-item" data-name="Barberry Lavashak" data-price="12" data-unit="Draft 100 g pack">Add</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card lavashak-card">
-              <div class="product-photo photo-placeholder photo-cherry" role="img" aria-label="Photo placeholder for sour cherry lavashak">
-                <span class="photo-label">Add photo</span>
-                <strong>Sour cherry</strong>
-              </div>
-              <div class="product-body">
-                <div class="product-meta"><span>Lavashak</span><span>Draft 100 g</span></div>
-                <h3>Sour cherry</h3>
-                <p>Deep cherry flavour with a juicy tang and a nostalgic sweet-sour finish.</p>
-                <div class="tag-row"><span>Juicy</span><span>Balanced sourness</span></div>
-                <div class="taste-row"><span>Sour ●●●●○</span><span>Sweet ●●○○○</span></div>
-                <div class="price-row">
-                  <div><span class="price">CHF 12</span><small>per pack</small></div>
-                  <button class="add-item" data-name="Sour Cherry Lavashak" data-price="12" data-unit="Draft 100 g pack">Add</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card lavashak-card">
-              <div class="product-photo photo-placeholder photo-pomegranate" role="img" aria-label="Photo placeholder for pomegranate lavashak">
-                <span class="photo-label">Add photo</span>
-                <strong>Pomegranate</strong>
-              </div>
-              <div class="product-body">
-                <div class="product-meta"><span>Lavashak</span><span>Draft 100 g</span></div>
-                <h3>Pomegranate</h3>
-                <p>Tart, fragrant and clean with a ruby colour and elegant pomegranate finish.</p>
-                <div class="tag-row"><span>Fresh finish</span><span>Fruit-forward</span></div>
-                <div class="taste-row"><span>Sour ●●●●○</span><span>Sweet ●●○○○</span></div>
-                <div class="price-row">
-                  <div><span class="price">CHF 12</span><small>per pack</small></div>
-                  <button class="add-item" data-name="Pomegranate Lavashak" data-price="12" data-unit="Draft 100 g pack">Add</button>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="natural-section">
-        <div class="container natural-grid">
-          <div class="natural-copy">
-            <p class="eyebrow">A healthier visual language</p>
-            <h2>Fresh pantry, not candy shop.</h2>
-            <p>
-              PariCerise should feel colourful without looking sugary or artificial. The visual world is built around fruit, herbs, cream paper, soft greens and berry reds, with Persian details used gently in the background.
-            </p>
-            <div class="natural-points">
-              <span>Natural textures</span>
-              <span>Fruit photography</span>
-              <span>Warm ceramics</span>
-              <span>Botanical greens</span>
-              <span>Persian motifs</span>
-            </div>
-          </div>
-          <div class="natural-photo photo-placeholder" role="img" aria-label="Placeholder for natural ingredient photograph">
-            <span class="photo-label">Ingredient photo</span>
-            <strong>Fruit, herbs & warm ceramics</strong>
-            <small>Think pomegranate, sour cherry, barberry, mint leaves, wooden spoon and cream linen</small>
-          </div>
-        </div>
-      </section>
-
-      <section class="product-section jam-section" id="jams">
-        <div class="container">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow">Confitures · small-batch preserves</p>
-              <h2>Breakfast jars with personality.</h2>
-            </div>
-            <p class="section-note">
-              Soft, fruit-led preserves made for toast, yogurt, cheese boards and little gifts. Jar sizes below are draft placeholders.
-            </p>
-          </div>
-
-          <div class="product-grid">
-            <article class="product-card jam-card">
-              <div class="product-photo photo-placeholder photo-berry" role="img" aria-label="Photo placeholder for wild berry jam">
-                <span class="photo-label">Add photo</span>
-                <strong>Wild berry</strong>
-              </div>
-              <div class="product-body">
-                <div class="product-meta"><span>Jam</span><span>Draft 220 g</span></div>
-                <h3>Wild berry</h3>
-                <p>Fragrant mixed berries with bright acidity and a deep ruby colour.</p>
-                <div class="tag-row"><span>Honey & lemon</span><span>Breakfast favourite</span></div>
-                <div class="price-row">
-                  <div><span class="price">CHF 18</span><small>per jar</small></div>
-                  <button class="add-item" data-name="Wild Berry Jam" data-price="18" data-unit="Draft 220 g jar">Add</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card jam-card">
-              <div class="product-photo photo-placeholder photo-forest" role="img" aria-label="Photo placeholder for raspberry blackberry jam">
-                <span class="photo-label">Add photo</span>
-                <strong>Raspberry & blackberry</strong>
-              </div>
-              <div class="product-body">
-                <div class="product-meta"><span>Jam</span><span>Draft 220 g</span></div>
-                <h3>Raspberry & blackberry</h3>
-                <p>Bold berry flavour with a velvety colour and lively tartness.</p>
-                <div class="tag-row"><span>Fruit-forward</span><span>Giftable</span></div>
-                <div class="price-row">
-                  <div><span class="price">CHF 20</span><small>per jar</small></div>
-                  <button class="add-item" data-name="Raspberry & Blackberry Jam" data-price="20" data-unit="Draft 220 g jar">Add</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card jam-card">
-              <div class="product-photo photo-placeholder photo-golden" role="img" aria-label="Photo placeholder for carrot lemon honey preserve">
-                <span class="photo-label">Add photo</span>
-                <strong>Carrot, lemon & honey</strong>
-              </div>
-              <div class="product-body">
-                <div class="product-meta"><span>Special preserve</span><span>Draft 220 g</span></div>
-                <h3>Carrot, lemon & honey</h3>
-                <p>Golden, softly spiced and delicately perfumed — warm and distinctive.</p>
-                <div class="tag-row"><span>Persian-inspired</span><span>Aromatic</span></div>
-                <div class="price-row">
-                  <div><span class="price">CHF 22</span><small>per jar</small></div>
-                  <button class="add-item" data-name="Carrot Lemon Honey Preserve" data-price="22" data-unit="Draft 220 g jar">Add</button>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="gift-section" id="gifts">
-        <div class="container gift-grid">
-          <div class="gift-visual">
-            <div class="gift-photo photo-placeholder" role="img" aria-label="Placeholder for PariCerise gift box photograph">
-              <span class="photo-label">Gift box photo</span>
-              <strong>Little PariCerise box</strong>
-              <small>2 jars + lavashak + handwritten card</small>
-            </div>
-          </div>
-          <div class="gift-copy">
-            <p class="eyebrow">Cute & giftable</p>
-            <h2>Small gifts that feel personal.</h2>
-            <p>
-              The brand works beautifully for birthdays, dinner invitations and small thank-you gifts. A simple cream box, berry-red ribbon and Persian-pattern label can make even a tiny order feel special.
-            </p>
-            <div class="gift-options">
-              <article>
-                <span>01</span>
-                <div><strong>Mini tasting box</strong><p>Two lavashak flavours + a handwritten note.</p></div>
-              </article>
-              <article>
-                <span>02</span>
-                <div><strong>Breakfast gift</strong><p>Two small jars wrapped in tissue and ribbon.</p></div>
-              </article>
-              <article>
-                <span>03</span>
-                <div><strong>Mixed Persian box</strong><p>Lavashak + one jam + seasonal fruit treat.</p></div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-section" id="story">
-        <div class="container story-grid">
-          <div class="story-copy">
-            <p class="eyebrow">Our story</p>
-            <h2>A little Persian fruit culture, made here.</h2>
-            <p>
-              PariCerise brings together the bright, tart fruit flavours of Persian snacks and preserves with a softer European pantry aesthetic. The result should feel personal, handmade, healthy-looking and joyful — never corporate and never overly polished.
-            </p>
-            <p>
-              The best version of this brand is warm and sensory: ruby fruit, cream paper, pistachio green, saffron gold, ceramic dishes, linen and subtle rug-inspired patterns.
-            </p>
-            <div class="signature">PariCerise <span>— fruit, colour & Persian soul</span></div>
-          </div>
-
-          <div class="story-card photo-placeholder" role="img" aria-label="Placeholder for founder or kitchen photograph">
-            <span class="photo-label">Lifestyle photo</span>
-            <strong>Your kitchen / making process</strong>
-            <small>Hands, fruit, tray of lavashak, jars, linen, warm daylight</small>
-          </div>
-        </div>
-      </section>
-
-      <section class="order-section" id="order">
-        <div class="persian-border persian-border-bottom" aria-hidden="true"></div>
-        <div class="container order-grid">
-          <div class="order-copy">
-            <p class="eyebrow light">Order for local pickup</p>
-            <h2>Choose your fruity favourites.</h2>
-            <p>
-              Add products above, adjust quantities, then prepare a WhatsApp message. Payment can be arranged by TWINT or cash at pickup.
-            </p>
-
-            <div class="pickup-note">
-              <span>Pickup area</span>
-              <strong>Lausanne / EPFL</strong>
-              <small>Exact time and place confirmed together.</small>
-            </div>
-          </div>
-
-          <div class="order-panel">
-            <div class="basket" aria-live="polite">
-              <div class="basket-header">
-                <div>
-                  <p class="eyebrow">Your order</p>
-                  <h3>Basket</h3>
-                </div>
-                <button type="button" class="text-button" id="clearBasket">Clear</button>
-              </div>
-
-              <div id="basketItems" class="basket-items">
-                <p class="empty-basket">Your basket is empty. Add a flavour above to get started.</p>
-              </div>
-
-              <div class="basket-total">
-                <span>Estimated total</span>
-                <strong id="basketTotal">CHF 0</strong>
-              </div>
-            </div>
-
-            <form class="order-form" id="orderForm">
-              <div class="form-row">
-                <label>
-                  Your name
-                  <input type="text" name="name" placeholder="Name" required />
-                </label>
-                <label>
-                  Contact
-                  <input type="text" name="contact" placeholder="WhatsApp / Telegram" required />
-                </label>
-              </div>
-
-              <label>
-                Preferred pickup area
-                <select name="pickup">
-                  <option>EPFL / Ecublens</option>
-                  <option>Lausanne</option>
-                  <option>Another nearby location</option>
-                </select>
-              </label>
-
-              <label>
-                Note <span class="optional">optional</span>
-                <textarea name="notes" rows="3" placeholder="Preferred time, gift note, ingredient question..."></textarea>
-              </label>
-
-              <button type="submit" class="button button-cream full-width">Prepare WhatsApp order</button>
-              <p class="form-helper">This does not charge you. It opens a pre-filled WhatsApp message for confirmation.</p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a href="#top" class="brand footer-brand">
-            <span class="brand-mark" aria-hidden="true">PC</span>
-            <span class="brand-text">Pari<span>Cerise</span></span>
-          </a>
-          <p class="footer-note">Handmade lavashak & small-batch fruit preserves with a Persian-inspired soul.</p>
-        </div>
-
-        <div>
-          <h3>Explore</h3>
-          <a href="#lavashak">Lavashak</a>
-          <a href="#jams">Jams</a>
-          <a href="#gifts">Gift boxes</a>
-        </div>
-
-        <div>
-          <h3>Contact</h3>
-          <p>Instagram: @paricerise</p>
-          <p>Email: hello@paricerise.com</p>
-          <p>WhatsApp: update before launch</p>
+    <section class="section editorial-section">
+      <div class="container editorial-grid">
+        <figure class="editorial-image image-frame">
+          <img src="https://images.unsplash.com/photo-1602878729245-e5a3dae173e6?auto=format&fit=crop&w=1500&q=82" alt="Pomegranate arranged on a simple ceramic plate" />
+        </figure>
+        <div class="editorial-copy">
+          <p class="eyebrow">Simple by nature</p>
+          <h2>Fruit. A little patience. A lot of flavour.</h2>
+          <p>Our visual world is inspired by Persian fruit, ceramics, garden greens and the warm colours of home.</p>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <span>© <span id="year"></span> PariCerise</span>
-        <span>Made with fruit, patience and colour.</span>
-      </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="section products-section jam-section" id="jams">
+      <div class="container">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Jams & preserves</p>
+            <h2>Made for slow mornings.</h2>
+          </div>
+          <p>Fruit-forward jars for toast, yogurt, cheese boards and small gifts.</p>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-visual">
+              <img src="https://images.unsplash.com/photo-1663276338767-4463aa099d25?auto=format&fit=crop&w=1000&q=80" alt="Berry jam with a spoon and fresh berries" />
+            </div>
+            <div class="product-info">
+              <div><p class="product-type">Jam · draft 220 g</p><h3>Wild berry</h3></div>
+              <p>Bright berries, honey and lemon.</p>
+              <div class="product-bottom"><strong>CHF 18</strong><button class="add-item" data-name="Wild Berry Jam" data-price="18" data-unit="Draft 220 g jar">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-visual">
+              <img src="https://images.unsplash.com/photo-1526430578163-6713faa4bbc5?auto=format&fit=crop&w=1000&q=80" alt="Fresh raspberries and blackberries in a white bowl" />
+            </div>
+            <div class="product-info">
+              <div><p class="product-type">Jam · draft 220 g</p><h3>Raspberry & blackberry</h3></div>
+              <p>Dark, fragrant and softly tart.</p>
+              <div class="product-bottom"><strong>CHF 20</strong><button class="add-item" data-name="Raspberry & Blackberry Jam" data-price="20" data-unit="Draft 220 g jar">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-visual">
+              <img src="https://images.unsplash.com/photo-1753735593289-c2ca1fa01935?auto=format&fit=crop&w=1000&q=80" alt="Ripe apricots on a decorative tray" />
+            </div>
+            <div class="product-info">
+              <div><p class="product-type">Preserve · draft 220 g</p><h3>Carrot, lemon & honey</h3></div>
+              <p>Golden, aromatic and Persian inspired.</p>
+              <div class="product-bottom"><strong>CHF 22</strong><button class="add-item" data-name="Carrot Lemon Honey Preserve" data-price="22" data-unit="Draft 220 g jar">Add</button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gift-section">
+      <div class="container gift-grid">
+        <div class="gift-copy">
+          <p class="eyebrow">Gift a little fruit</p>
+          <h2>A small box,<br />made to share.</h2>
+          <p>Mix lavashak and jars into a simple tasting box for birthdays, hosts or just because.</p>
+          <a class="button button-soft" href="#order">Build a gift order</a>
+        </div>
+        <div class="gift-collage">
+          <img class="gift-img gift-img-a" src="https://images.unsplash.com/photo-1451486242265-24b0c0ef9a51?auto=format&fit=crop&w=900&q=80" alt="Artisan preserve jars" />
+          <img class="gift-img gift-img-b" src="https://images.unsplash.com/photo-1526430578163-6713faa4bbc5?auto=format&fit=crop&w=700&q=80" alt="Fresh berries" />
+          <div class="gift-sticker">made<br />with care</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story">
+      <div class="container story-inner">
+        <p class="eyebrow">The story</p>
+        <h2>A little Persian nostalgia,<br />made in Lausanne.</h2>
+        <p>PariCerise grew from the flavours I grew up with: tart fruit, homemade preserves and lavashak. Everything is prepared in small batches and shared locally.</p>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="container order-grid">
+        <div class="order-copy">
+          <p class="eyebrow light">Order</p>
+          <h2>Choose your favourites.</h2>
+          <p>Add products above, adjust quantities, then open a WhatsApp message for final confirmation.</p>
+          <div class="pickup-card"><span>Pickup</span><strong>Lausanne / EPFL</strong><small>Time and place confirmed together.</small></div>
+        </div>
+
+        <div class="order-panel">
+          <div class="basket" aria-live="polite">
+            <div class="basket-header"><div><p class="eyebrow">Your order</p><h3>Basket</h3></div><button type="button" class="text-button" id="clearBasket">Clear</button></div>
+            <div id="basketItems" class="basket-items"><p class="empty-basket">Your basket is empty.</p></div>
+            <div class="basket-total"><span>Estimated total</span><strong id="basketTotal">CHF 0</strong></div>
+          </div>
+
+          <form class="order-form" id="orderForm">
+            <div class="form-row">
+              <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
+              <label>Contact<input type="text" name="contact" placeholder="WhatsApp / Telegram" required /></label>
+            </div>
+            <label>Pickup area<select name="pickup"><option>EPFL / Ecublens</option><option>Lausanne</option><option>Another nearby location</option></select></label>
+            <label>Note <span class="optional">optional</span><textarea name="notes" rows="3" placeholder="Preferred day/time, gift note, ingredient question..."></textarea></label>
+            <button class="button button-cream full-width" type="submit">Prepare WhatsApp order</button>
+            <p class="form-helper">No payment is taken here. You confirm the order in WhatsApp.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-mark">PC</span><span class="brand-name">Pari<span>Cerise</span></span></a><p>Handmade lavashak & fruit preserves.</p></div>
+      <div><strong>Explore</strong><a href="#lavashak">Lavashak</a><a href="#jams">Jams</a><a href="#story">Story</a></div>
+      <div><strong>Contact</strong><p>@paricerise</p><p>hello@paricerise.com</p><p>WhatsApp: update before launch</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> PariCerise</span><span>Selected placeholder photography from Unsplash; replace with your own product photos before final launch.</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
